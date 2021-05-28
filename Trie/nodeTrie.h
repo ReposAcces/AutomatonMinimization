@@ -4,8 +4,8 @@
 #include<map>
 
 class NodeTrie{
-private:
-    std::map<char,NodeTrie> children;
+public:
+    std::map<char,NodeTrie*> children;
     bool endOfWord;
 public:
     NodeTrie(){
