@@ -7,6 +7,7 @@ class Trie{
 private:
     NodeTrie m_root;
 public:
+    Trie(){};
 };
 
 
