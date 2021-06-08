@@ -3,6 +3,7 @@
 
 #include"nodeTrie.h"
 
+
 class Trie{
 private:
     NodeTrie *m_pRoot;
@@ -34,14 +35,26 @@ public:
        current->endOfWord = true;
    }
    void printTrie(NodeTrie *&root){
-       for(auto it = root->children.begin() ; it!= root->children.end(); it++){
-           printTrie(it->second);
-           cout << it->first << " ";
-       }
-       cout << endl;
+        fstream file;
+        file.open("AFD.dot", std::ios::out);
+        file << "digraph ll {" << std::endl;
+        
+
+        file << "}";
+        file.close();
+
+
+
+
+       // for(auto it = root->children.begin() ; it!= root->children.end(); it++){
+       //     cout << it->first << " ";
+       //     printTrie(it->second);
+       // }
+       // cout << endl;
    }
    void printTrieConsole(){
        printTrie(m_pRoot);
+       system("dot -Tpng AFD.dot -o AFD.png");
    }
 
 };
