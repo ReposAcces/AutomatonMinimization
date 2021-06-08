@@ -1,5 +1,5 @@
 #include<iostream>
-//#include"trie.h"
+#include"trie.h"
 
 int main(){
 
@@ -13,7 +13,15 @@ int main(){
     //     // std::cout << main[e] <<" ," ;
     // }std::cout << "\n";
 
-    
+    std::map<char,int> first;
+    std::map<char,int> second;
+
+    first['x']=8;
+    first['y']=16;
+    first['z']=32;
+    if(!first['d']){
+        std::cout << "Dont exist the caracter d\n";
+    }
 
 
 
