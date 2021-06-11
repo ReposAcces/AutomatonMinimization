@@ -13,6 +13,7 @@ public:
     }
     bool isEndOfWord(){return this->endOfWord;}
     void printNode(){}
+    void letters(){}
 };
 
 
