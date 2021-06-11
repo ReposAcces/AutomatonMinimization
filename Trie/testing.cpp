@@ -22,6 +22,7 @@ int main(){
     if(!first['d']){
         std::cout << "Dont exist the caracter d\n";
     }
+    cout << "Alfabetizacion de los numeros"
 
 
 
