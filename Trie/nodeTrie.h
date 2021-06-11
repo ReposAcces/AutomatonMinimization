@@ -12,6 +12,7 @@ public:
         this->endOfWord = false;
     }
     bool isEndOfWord(){return this->endOfWord;}
+    void printNode(){}
 };
 
 
