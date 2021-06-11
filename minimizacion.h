@@ -26,4 +26,3 @@ public:
       }
    }
    
-   cout<<":V "<<endl;
