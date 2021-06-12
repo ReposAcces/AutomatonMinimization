@@ -4,12 +4,13 @@
 #include<fstream>
 #include<queue>
 using namespace std;
-
 #include"nodeTrie.h"
 
+#define VIOLET "#ff31ff"
+#define GREEN "#02ff14"
 
 class Trie{
-private:
+public:
     NodeTrie *m_pRoot;
 public:
     Trie(){
@@ -24,6 +25,7 @@ public:
 
     void printTrie(NodeTrie *&root);
     void printTrieConsole();
+    void printPreOrden(NodeTrie *root);
 };
 
 

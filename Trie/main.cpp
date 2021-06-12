@@ -9,6 +9,8 @@ int main(){;
     trie->insert("a");
     trie->printTrieConsole();
 
+    trie->printPreOrden(trie->m_pRoot);
+
 
 
     delete trie;

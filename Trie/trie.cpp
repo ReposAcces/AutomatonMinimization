@@ -26,29 +26,44 @@ void Trie::insert(std::string word){
 
 
 // A1 -> A2 [label=f];
+//	f10[shape=Mrecord, style=filled, fillcolor="#02ff14" , label="{ <data> 52  |  <ew>F   } "];
+
 void Trie::printTrie(NodeTrie *&root){
      std::fstream file;
      file.open("AFD.dot", std::ios::out);
      file << "digraph ll {" << std::endl;
 
      queue< NodeTrie* > *treeQueue = new queue< NodeTrie* >();
+     queue< NodeTrie* > *temporaly = new queue< NodeTrie* >();
      treeQueue->push(root);
+     temporaly->push(root);
      NodeTrie *nodo;
      string valueNode = "INITIAL";
+     bool ew = true;
+     //RECORRIDO DE TODOS LOS NODOS.
      while( !treeQueue->empty() ){
          nodo = treeQueue->front();treeQueue->pop();
-         if(nodo->children.empty()){
-             //cout << nodo->isEndOfWord() << endl;
-             file << "\t" <<
-         }
+         ew = nodo->isEndOfWord();
+         // if(nodo->children.empty()){
+         //     //cout << nodo->isEndOfWord() << endl;
+         //     file << "\t" <<"\""<<nodo <<"\"" << " -> " << "\""<< "any"<<"\""  << endl;
+         // }
          for(auto it = nodo->children.begin() ; it != nodo->children.end(); it++){
-            cout << it->first << " ";
+            //cout << it->first << " ";
             treeQueue->push(it->second);
-            file << "\t" <<"\""<<nodo <<"\"" << " -> " << "\""<< it->second<<"\"" <<
-                    " [label=" << it->first << "];" << endl;
+            temporaly->push(it->second);
+            //file << "\t" <<"\""<<nodo <<"\"" << " -> " << "\""<< it->second<<"\"" <<
+                    //" [label=" << it->first << "];" << endl;
+            file<<"\t" << nodo << "[shape=Mrecord, style=filled, fillcolor="<<GREEN
+                << ", label="<<"\""<<"{ <data> " <<nodo<<" | <ew> "<< ew <<" }" <<"\""<<"];"<<endl;
          }
-    }
+     }
      delete treeQueue;
+
+     //BUCLE TO TRANSITIONS
+     while(0){
+
+     }
      file << "}";
      file.close();
 }
@@ -59,4 +74,15 @@ void Trie::printTrie(NodeTrie *&root){
 void Trie::printTrieConsole(){
     printTrie(m_pRoot);
     system("dot -Tpng AFD.dot -o AFD.png");
+}
+
+/*
+    RECORRE EL TRI EL PREORDEN
+*/
+void Trie::printPreOrden(NodeTrie *root){
+    //PRINT ONLY CHILDREN,ALFABETO
+    for(auto it = root->children.begin() ; it!= root->children.end();it++ ){
+        cout << it->first << " ";
+        printPreOrden(it->second);
+    }
 }

@@ -1,6 +1,6 @@
 digraph ll {
 
-	f10[shape=record, style=filled , label="{ <data> 52  |  <ew>   } "];
+	f10[shape=Mrecord, style=filled, fillcolor="#02ff14" , label="{ <data> 52  |  <ew>F   } "];
 
 	e90 -> f10 [label=a];
 	e90 -> 110 [label=v];
