@@ -7,6 +7,7 @@ class NodeTrie{
 public:
     std::map<char,NodeTrie*> children;
     bool endOfWord;
+    int valueState ;
 public:
     NodeTrie(){
         this->endOfWord = false;
@@ -14,6 +15,11 @@ public:
     bool isEndOfWord(){return this->endOfWord;}
     void printNode(){}
     void letters(){}
+    int getValueState(){return valueState;}
+    friend ostream &operator<<( ostream &output, const NodeTrie *&node ) {
+        output << node->valueState;
+        return output;
+    }
 };
 
 

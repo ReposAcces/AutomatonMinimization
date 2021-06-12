@@ -1,6 +1,6 @@
 #include"trie.h"
 
-int main(){
+int main(){;
 
     Trie *trie = new Trie();
     trie->insert("abc");

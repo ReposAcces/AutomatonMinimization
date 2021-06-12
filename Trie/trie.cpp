@@ -24,6 +24,8 @@ void Trie::insert(std::string word){
 }
 
 
+
+// A1 -> A2 [label=f];
 void Trie::printTrie(NodeTrie *&root){
      std::fstream file;
      file.open("AFD.dot", std::ios::out);
@@ -32,14 +34,18 @@ void Trie::printTrie(NodeTrie *&root){
      queue< NodeTrie* > *treeQueue = new queue< NodeTrie* >();
      treeQueue->push(root);
      NodeTrie *nodo;
+     string valueNode = "INITIAL";
      while( !treeQueue->empty() ){
-         nodo = treeQueue->front();treeQueue->pop();git
-         // if(nodo->children.empty()){
-         //     cout << nodo->isEndOfWord() << endl;
-         // }
+         nodo = treeQueue->front();treeQueue->pop();
+         if(nodo->children.empty()){
+             //cout << nodo->isEndOfWord() << endl;
+             file << "\t" <<
+         }
          for(auto it = nodo->children.begin() ; it != nodo->children.end(); it++){
             cout << it->first << " ";
             treeQueue->push(it->second);
+            file << "\t" <<"\""<<nodo <<"\"" << " -> " << "\""<< it->second<<"\"" <<
+                    " [label=" << it->first << "];" << endl;
          }
     }
      delete treeQueue;
@@ -48,6 +54,7 @@ void Trie::printTrie(NodeTrie *&root){
 }
 
 
+//   52[style=filled ,fillcolor=grey26 label="{ <data> 52  | { <left>  | <right>  }} "];
 
 void Trie::printTrieConsole(){
     printTrie(m_pRoot);
