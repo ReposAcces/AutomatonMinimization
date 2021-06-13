@@ -7,12 +7,14 @@ class NodeTrie{
 public:
     std::map<char,NodeTrie*> children;
     bool endOfWord;
-    int valueState ;
+    string valueState ;
 public:
     NodeTrie(){
         this->endOfWord = false;
     }
     bool isEndOfWord(){return this->endOfWord;}
+    void setValueState(std::string value){this->valueState =value;}
+    string getValueState()const{return valueState;}
     void printNode(){}
     void letters(){}
     int getValueState(){return valueState;}

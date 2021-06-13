@@ -79,10 +79,13 @@ void Trie::printTrieConsole(){
 /*
     RECORRE EL TRI EL PREORDEN
 */
-void Trie::printPreOrden(NodeTrie *root){
+void Trie::printPreOrden(NodeTrie *nodeTrie){
+    //cout << nodeTrie << endl;
+    cout<<"\t" << nodeTrie << "[shape=Mrecord, style=filled, fillcolor="<<GREEN
+        << ", label="<<"\""<<"{ <data> " <<nodeTrie<<" | <ew> "<< nodeTrie->isEndOfWord() <<" }" <<"\""<<"];"<<endl;
     //PRINT ONLY CHILDREN,ALFABETO
-    for(auto it = root->children.begin() ; it!= root->children.end();it++ ){
-        cout << it->first << " ";
+    for(auto it = nodeTrie->children.begin() ; it!= nodeTrie->children.end();it++ ){
+        //cout << it->first << " ";
         printPreOrden(it->second);
     }
 }
