@@ -25,7 +25,7 @@ public:
 
     void printTrie(NodeTrie *&root);
     void printTrieConsole();
-    void printPreOrden(NodeTrie *root);
+    void printPreOrden(NodeTrie *root, ostream&);
 };
 
 

@@ -1,9 +1,19 @@
 digraph ll {
-	0x56195fe51e90[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe51e90 | <ew> 0 }"];
-	0x56195fe51e90[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe51e90 | <ew> 0 }"];
-	0x56195fe51f10[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe51f10 | <ew> 1 }"];
-	0x56195fe52110[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe52110 | <ew> 0 }"];
-	0x56195fe51f90[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe51f90 | <ew> 0 }"];
-	0x56195fe51f90[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe51f90 | <ew> 0 }"];
-	0x56195fe52190[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> 0x56195fe52190 | <ew> 0 }"];
+	node [shape=Mrecord];
+	 [style=filled, fillcolor="#02ff14", label="{ <data>   | <ew> 0 }"];
+	a[style=filled, fillcolor="#02ff14", label="{ <data> a | <ew> 1 }"];
+	 ab[style=filled, fillcolor="#02ff14", label="{ <data>  ab | <ew> 0 }"];
+	abc[style=filled, fillcolor="#02ff14", label="{ <data> abc | <ew> 1 }"];
+	abd[style=filled, fillcolor="#02ff14", label="{ <data> abd | <ew> 1 }"];
+	 v[style=filled, fillcolor="#02ff14", label="{ <data>  v | <ew> 0 }"];
+	 ve[style=filled, fillcolor="#02ff14", label="{ <data>  ve | <ew> 0 }"];
+	vea[style=filled, fillcolor="#02ff14", label="{ <data> vea | <ew> 1 }"];
+
+	 :ew:c -> a [label=a];
+	 :ew:c ->  v [label=v];
+	a:ew:c ->  ab [label=b];
+	 v:ew:c ->  ve [label=e];
+	 ab:ew:c -> abc [label=c];
+	 ab:ew:c -> abd [label=d];
+	 ve:ew:c -> vea [label=a];
 }

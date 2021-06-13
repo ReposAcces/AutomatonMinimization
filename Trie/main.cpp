@@ -9,7 +9,9 @@ int main(){;
     trie->insert("a");
     trie->printTrieConsole();
 
-    trie->printPreOrden(trie->m_pRoot);
+    // fstream file;
+    // file.open("test.txt",ios::app);
+    // trie->printPreOrden(trie->m_pRoot,file);
 
 
 
