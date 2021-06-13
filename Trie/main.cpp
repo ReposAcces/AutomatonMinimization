@@ -3,10 +3,10 @@
 int main(){;
 
     Trie *trie = new Trie();
-    trie->insert("abc");
-    trie->insert("abd");
-    trie->insert("vea");
-    trie->insert("a");
+    trie->insert("car");trie->insert("cart");trie->insert("cat");trie->insert("clay");
+    trie->insert("pat");trie->insert("pay");trie->insert("play");
+    trie->insert("rat");trie->insert("ray");
+    trie->insert("sat");trie->insert("say");trie->insert("stay");
     trie->printTrieConsole();
 
     // fstream file;

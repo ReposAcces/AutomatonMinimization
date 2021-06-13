@@ -83,8 +83,8 @@ void Trie::printTrieConsole(){
 */
 void Trie::printPreOrden(NodeTrie *nodeTrie,ostream&file){
     string COLOR="";
-    if(nodeTrie ==m_pRoot){COLOR=VIOLET;}
-    if(nodeTrie->isEndOfWord()){COLOR=GREEN;}
+    if(nodeTrie ==m_pRoot){COLOR=GREEN;}
+    if(nodeTrie->isEndOfWord()){COLOR=VIOLET;}
     //cout << nodeTrie << endl;
     file<<"\t" << nodeTrie->getValueState() << "[style=filled, fillcolor="<<"\""<<COLOR<<"\""
         << ", label="<<"\""<<"{ <data> " <<nodeTrie->getValueState()<<" | <ew> "<< nodeTrie->isEndOfWord() <<" }" <<"\""<<"];"<<endl;
