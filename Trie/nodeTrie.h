@@ -11,7 +11,7 @@ public:
 public:
     NodeTrie(){
         this->endOfWord = false;
-        this->valueState=" ";
+        this->valueState="R";
     }
     bool isEndOfWord(){return this->endOfWord;}
     void setValueState(std::string value){this->valueState =value;}

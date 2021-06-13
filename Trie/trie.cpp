@@ -16,9 +16,15 @@ void Trie::insert(std::string word){
       if ( !node) {
           node = new NodeTrie();
           current->children[ch] = node;
-          string valueStateTemp = current->getValueState();
-          valueStateTemp.push_back(ch);
-          node->setValueState(valueStateTemp);
+          if(current==m_pRoot){
+              string valueStateTemp = "";
+              valueStateTemp.push_back(ch);
+              node->setValueState(valueStateTemp);
+          }else{
+              string valueStateTemp = current->getValueState();
+              valueStateTemp.push_back(ch);
+              node->setValueState(valueStateTemp);
+          }
       }
       current = node;
   }
@@ -76,8 +82,11 @@ void Trie::printTrieConsole(){
     RECORRE EL TRI EL PREORDEN
 */
 void Trie::printPreOrden(NodeTrie *nodeTrie,ostream&file){
+    string COLOR="";
+    if(nodeTrie ==m_pRoot){COLOR=VIOLET;}
+    if(nodeTrie->isEndOfWord()){COLOR=GREEN;}
     //cout << nodeTrie << endl;
-    file<<"\t" << nodeTrie->getValueState() << "[style=filled, fillcolor="<<"\""<<GREEN<<"\""
+    file<<"\t" << nodeTrie->getValueState() << "[style=filled, fillcolor="<<"\""<<COLOR<<"\""
         << ", label="<<"\""<<"{ <data> " <<nodeTrie->getValueState()<<" | <ew> "<< nodeTrie->isEndOfWord() <<" }" <<"\""<<"];"<<endl;
     //PRINT ONLY CHILDREN,ALFABETO
     for(auto it = nodeTrie->children.begin() ; it!= nodeTrie->children.end();it++ ){
