@@ -2,9 +2,13 @@
 #define TRIE_H
 
 #include"nodeTrie.h"
+#include"bubenzerTopic.h"
 
 #define VIOLET "#ff31ff"
 #define GREEN "#02ff14"
+
+using REGISTER = map<SignatureState,NodeTrie*>;
+using STATEMAP = map<NodeTrie*,NodeTrie*>;
 
 class Trie{
 public:
@@ -27,7 +31,7 @@ public:
     /**
     * Minimization Bubenzer
     */
-    void minimizeBubenzer();
+    void minimizeBubenzer(NodeTrie*,REGISTER&,STATEMAP&);
 };
 
 

@@ -102,6 +102,6 @@ void Trie::printPreOrden(NodeTrie *nodeTrie,ostream&file){
 /**
 * BUBEMZER MINIMIZATION
 */
-void Trie::minimizeBubenzer(){
+void Trie::minimizeBubenzer(NodeTrie*root,REGISTER &R,STATEMAP &M){
     cout << "hello world";
 }
