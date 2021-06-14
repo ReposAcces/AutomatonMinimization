@@ -37,7 +37,9 @@ void Trie::insert(std::string word){
 
 // A1 -> A2 [label=f];
 //	f10[shape=Mrecord, style=filled, fillcolor="#02ff14" , label="{ <data> 52  |  <ew>F   } "];
-
+/*
+    DOT  TRIE IN FILE.DOT TO CONVERT IN .PNG
+*/
 void Trie::printTrie(NodeTrie *&root){
      std::fstream file;
      file.open("AFD.dot", std::ios::out);
@@ -71,8 +73,6 @@ void Trie::printTrie(NodeTrie *&root){
 }
 
 
-//   52[style=filled ,fillcolor=grey26 label="{ <data> 52  | { <left>  | <right>  }} "];
-
 void Trie::printTrieConsole(){
     printTrie(m_pRoot);
     system("dot -Tpng AFD.dot -o AFD.png");
@@ -93,4 +93,15 @@ void Trie::printPreOrden(NodeTrie *nodeTrie,ostream&file){
         //cout << it->first << " ";
         printPreOrden(it->second,file);
     }
+}
+
+
+
+
+
+/**
+* BUBEMZER MINIMIZATION
+*/
+void Trie::minimizeBubenzer(){
+    cout << "hello world";
 }

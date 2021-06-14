@@ -1,9 +1,6 @@
 #ifndef TRIE_H
 #define TRIE_H
-#include<iostream>
-#include<fstream>
-#include<queue>
-using namespace std;
+
 #include"nodeTrie.h"
 
 #define VIOLET "#ff31ff"
@@ -26,6 +23,11 @@ public:
     void printTrie(NodeTrie *&root);
     void printTrieConsole();
     void printPreOrden(NodeTrie *root, ostream&);
+
+    /**
+    * Minimization Bubenzer
+    */
+    void minimizeBubenzer();
 };
 
 
