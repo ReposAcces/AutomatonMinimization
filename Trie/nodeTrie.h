@@ -1,7 +1,11 @@
 #ifndef NODETRIE_H
 #define NODETRIE_H
 
+#include<iostream>
+#include<fstream>
+#include<queue>
 #include<map>
+using namespace std;
 
 class NodeTrie{
 public:

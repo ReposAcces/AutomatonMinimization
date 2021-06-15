@@ -1,4 +1,0 @@
-	[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data>  | <ew> 0 }"];
-	a[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> a | <ew> 0 }"];
-	ab[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> ab | <ew> 0 }"];
-	abc[shape=Mrecord, style=filled, fillcolor=#02ff14, label="{ <data> abc | <ew> 1 }"];
