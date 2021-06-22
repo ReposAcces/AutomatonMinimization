@@ -1,1 +1,1 @@
-# AutomatonMinimization
+Barrios y Macedo
