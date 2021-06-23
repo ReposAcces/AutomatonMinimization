@@ -4,12 +4,14 @@ int main(){;
 
     Trie *trie = new Trie();
 
-    trie->insert("car");trie->insert("cart");trie->insert("cat");trie->insert("clay");
-    trie->insert("pat");trie->insert("pay");trie->insert("play");
-    trie->insert("rat");trie->insert("ray");
-    trie->insert("sat");trie->insert("say");trie->insert("stay");
-    // trie->insert("pa");trie->insert("py");
-    // trie->insert("ca");trie->insert("cy");
+    // trie->insert("car");trie->insert("cart");trie->insert("cat");trie->insert("clay");
+    // trie->insert("pat");trie->insert("pay");trie->insert("play");
+    // trie->insert("rat");trie->insert("ray");
+    // trie->insert("sat");trie->insert("say");trie->insert("stay");
+
+
+    trie->insert("pa");trie->insert("py");
+    trie->insert("ca");trie->insert("cy");
 
     trie->printTrieConsole();
 
@@ -19,12 +21,12 @@ int main(){;
 
     REGISTER R;
     STATEMAP M;
-    cout << "Print Register: " << endl;
-    for(auto it = R.begin() ;it != R.end() ; it++){
-        // cout <<
-    }
+    //cout << "Print Register: " << endl;
+    // for(auto it = R.begin() ;it != R.end() ; it++){
+    //     // cout <<
+    // }
     trie->minimizeBubenzer(trie->m_pRoot,R,M);
-    trie->printTrieConsole();
+    trie->printTrieConsole("AFDminimozado.png");
 
     delete trie;
     return 0;

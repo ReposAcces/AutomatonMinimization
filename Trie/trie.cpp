@@ -73,9 +73,10 @@ void Trie::printTrie(NodeTrie *&root){
 }
 
 
-void Trie::printTrieConsole(){
+void Trie::printTrieConsole(string str){
     printTrie(m_pRoot);
-    system("dot -Tpng AFD.dot -o AFD.png");
+    string inSystem = "dot -Tpng AFD.dot -o " + str;
+    system(inSystem.c_str());
 }
 
 /*
@@ -115,5 +116,6 @@ void Trie::minimizeBubenzer(NodeTrie*root,REGISTER &R,STATEMAP &M){
     }else{
         M[root] = R[ss];
         cout << "deleting " << root->getValueState() << endl;
+        //
     }
 }

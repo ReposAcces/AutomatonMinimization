@@ -25,7 +25,7 @@ public:
     void insert(std::string word);
 
     void printTrie(NodeTrie *&root);
-    void printTrieConsole();
+    void printTrieConsole(string str ="AFD.png");
     void printPreOrden(NodeTrie *root, ostream&);
 
     /**
