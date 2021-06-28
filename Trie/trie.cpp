@@ -115,7 +115,8 @@ void Trie::minimizeBubenzer(NodeTrie*root,REGISTER &R,STATEMAP &M){
         M[root] = R[ss] = root;
     }else{
         M[root] = R[ss];
-        cout << "deleting " << root->getValueState() << endl;
+        //cout << "deleting " << root->getValueState() << endl;
         //
+        delete root;
     }
 }

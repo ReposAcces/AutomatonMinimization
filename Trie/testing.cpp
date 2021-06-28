@@ -1,6 +1,19 @@
 #include<iostream>
 #include<list>
+#include<unordered_map>
 #include"trie.h"
+
+
+class A{
+private:
+    // int a;
+    list<int> lista;
+public:
+    A(){}
+    ~A(){}
+    // int getA(){return a;}
+    // void setB(int b){this->b=b;}
+};
 
 int main(){
 
@@ -47,6 +60,19 @@ int main(){
     if(a<b)cout << "a es menor que b\n";
     else if(a>b) cout << "a es mayor que b\n";
     else if(a == b) cout << "a es igual que b\n";
+    A A;
+    short int f;
+    vector<int> listaPads;
+    map<int,int> map_int;
+    unordered_map<int,int> hash;
+    listaPads.push_back(10);listaPads.push_back(20);
+    listaPads.push_back(30);listaPads.push_back(40);
+    listaPads.push_back(50);listaPads.push_back(60);
+    
+    int *pointer_b;
+
+    cout << "sizeof(A): " << sizeof(hash) << endl;
+
 
     return 0;
 }

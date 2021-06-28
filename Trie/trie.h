@@ -23,6 +23,8 @@ public:
     * Iterative implementation of insert into trie
     */
     void insert(std::string word);
+    void countNumnerosNodos(){;}
+
 
     void printTrie(NodeTrie *&root);
     void printTrieConsole(string str ="AFD.png");

@@ -10,8 +10,9 @@ int main(){;
     // trie->insert("sat");trie->insert("say");trie->insert("stay");
 
 
-    trie->insert("pa");trie->insert("py");
-    trie->insert("ca");trie->insert("cy");
+    // trie->insert("pa");trie->insert("py");
+    // trie->insert("ca");trie->insert("cy");
+    trie->insert("cat");trie->insert("pa");
 
     trie->printTrieConsole();
 

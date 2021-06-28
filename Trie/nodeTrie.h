@@ -18,12 +18,15 @@ public:
         this->valueState="R";
     }
     bool isEndOfWord(){return this->endOfWord;}
+    bool getEndOfWord(){return this->endOfWord;}
     void setValueState(std::string value){this->valueState =value;}
     string getValueState()const{return valueState;}
     void printNode(){}
     void letters(){}
     friend ostream &operator<<( ostream &output, const NodeTrie *&node ) {
-        output << node->valueState;
+        //output << node->valueState;
+        //output <<node->endOfWord;
+        output <<"dadd";
         return output;
     }
 };

@@ -20,7 +20,7 @@ public:
     list< pair<char,NodeTrie*> > *getOutTransition(){
         return &outgoingTransition;
     }
-    friend bool operator< (const SignatureState &ss1,const SignatureState &ss2){
+    friend bool operator < (const SignatureState &ss1,const SignatureState &ss2){
         return ss1.outgoingTransition < ss2.outgoingTransition;
     }
 };
