@@ -22,12 +22,20 @@ int main(){;
 
     REGISTER R;
     STATEMAP M;
-    //cout << "Print Register: " << endl;
-    // for(auto it = R.begin() ;it != R.end() ; it++){
-    //     // cout <<
-    // }
+
     trie->minimizeBubenzer(trie->m_pRoot,R,M);
     trie->printTrieConsole("AFDminimozado.png");
+
+    cout << "Print Map: " << endl;
+    for(auto it = M.begin() ;it != M.end() ; it++){
+        cout << it->first->getValueState() << "=>" << it->second->getValueState() << endl;
+    }
+    cout << "\nPrint Register: " << endl;
+    for(auto it = R.begin() ;it != R.end() ; it++){
+        cout << it->first << "=>" << it->second->getValueState() << endl;
+    }
+
+
 
     delete trie;
     return 0;
