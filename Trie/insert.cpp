@@ -8,9 +8,9 @@ void read_file(){
     if (archivo.is_open()) {
         string a;
         while ( !archivo.eof() )
-        {/*
+        {
             a = archivo.get();
-            cout<<a<<endl;*/
+            ///ingresar funcion 
         }
         archivo.close();
     }
